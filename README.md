@@ -1,4 +1,4 @@
-# React + Vite
+# React + Vite - Redux Toolkit
 
 Aplicación Calendar-app proyecto personal que permite gestionar un calendario de eventos con autenticación (Frontend con React):
 
