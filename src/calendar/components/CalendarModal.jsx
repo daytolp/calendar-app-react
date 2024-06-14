@@ -9,6 +9,7 @@ import Swal from 'sweetalert2';
 import 'sweetalert2/dist/sweetalert2.min.css';
 import { useUiStore } from '../../hooks/useUiStore';
 import { useCalendarStore } from '../../hooks/useCalendarStore';
+import { getEnvVariables } from '../../helpers';
 
   registerLocale('es', es)
   const customStyles = {
@@ -22,8 +23,9 @@ import { useCalendarStore } from '../../hooks/useCalendarStore';
     },
   };
   
+  if (getEnvVariables().VITE_MODE !== 'test')
   // Make sure to bind modal to your appElement (https://reactcommunity.org/react-modal/accessibility/)
-  Modal.setAppElement('#root');
+    Modal.setAppElement('#root');
 export const CalendarModal = () => {
     const { isDateModalOpen, closeDateModal } = useUiStore();
     const [isFormSutmitted, setIsFormSutmitted] = useState(false);

@@ -17,7 +17,7 @@ import { addHours } from 'date-fns';
 export const calendarSlice = createSlice({
     name: 'calendar',
     initialState: {
-        isLoadingEvent: true,
+        isLoadingEvents: true,
         events: [],
         activeEvent: null
     },
